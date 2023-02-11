@@ -6,7 +6,9 @@ a = 2 b = 10 -> max = 10
 a = -9 b = -3 -> max = -3
 */
 
-Console.WriteLine ("Эта программа определяет какое из введённых Вами двух чисел больше");
+Console.Clear();
+
+Console.WriteLine ("Эта программа определяет, какое из введённых Вами двух чисел больше");
 Console.Write("Введите первое число: ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
 
