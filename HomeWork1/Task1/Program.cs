@@ -8,7 +8,7 @@ a = -9 b = -3 -> max = -3
 
 Console.Clear();
 
-Console.WriteLine ("Эта программа определяет, какое из введённых Вами двух чисел больше");
+Console.WriteLine("Эта программа определяет, какое из введённых Вами двух чисел больше");
 Console.Write("Введите первое число: ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -17,13 +17,13 @@ int secondNumber = Convert.ToInt32(Console.ReadLine());
 
 if (firstNumber > secondNumber)
 {
-   Console.WriteLine("Число " + firstNumber + " больше, чем число " + secondNumber); 
+    Console.WriteLine("Число " + firstNumber + " больше, чем число " + secondNumber);
 }
 else if (firstNumber < secondNumber)
 {
-   Console.WriteLine("Число " + secondNumber + " больше, чем число " + firstNumber); 
+    Console.WriteLine("Число " + secondNumber + " больше, чем число " + firstNumber);
 }
 else
 {
-  Console.WriteLine("Числa " + secondNumber + " и " + firstNumber + " равны между собой! )))");  
+    Console.WriteLine("Числa " + secondNumber + " и " + firstNumber + " равны между собой! )))");
 }
