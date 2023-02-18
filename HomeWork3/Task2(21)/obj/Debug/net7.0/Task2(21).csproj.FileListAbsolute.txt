@@ -1,0 +1,15 @@
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\bin\Debug\net7.0\Task2(21).exe
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\bin\Debug\net7.0\Task2(21).deps.json
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\bin\Debug\net7.0\Task2(21).runtimeconfig.json
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\bin\Debug\net7.0\Task2(21).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\bin\Debug\net7.0\Task2(21).pdb
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).csproj.AssemblyReference.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).GeneratedMSBuildEditorConfig.editorconfig
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).AssemblyInfoInputs.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).AssemblyInfo.cs
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).csproj.CoreCompileInputs.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\refint\Task2(21).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).pdb
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\Task2(21).genruntimeconfig.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task2(21)\obj\Debug\net7.0\ref\Task2(21).dll

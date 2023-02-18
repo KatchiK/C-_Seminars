@@ -1,0 +1,15 @@
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\bin\Debug\net7.0\Task5(Add2).exe
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\bin\Debug\net7.0\Task5(Add2).deps.json
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\bin\Debug\net7.0\Task5(Add2).runtimeconfig.json
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\bin\Debug\net7.0\Task5(Add2).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\bin\Debug\net7.0\Task5(Add2).pdb
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).csproj.AssemblyReference.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).GeneratedMSBuildEditorConfig.editorconfig
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).AssemblyInfoInputs.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).AssemblyInfo.cs
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).csproj.CoreCompileInputs.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\refint\Task5(Add2).dll
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).pdb
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\Task5(Add2).genruntimeconfig.cache
+F:\Learning\С#\SeminarС#\HomeWork3\Task5(Add2)\obj\Debug\net7.0\ref\Task5(Add2).dll
