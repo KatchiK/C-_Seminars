@@ -4,52 +4,40 @@
 */
 
 
-//Console.Clear();
+Console.Clear();
+Console.WriteLine("Программа принимает на вход любую строку содержащую до 8 чисел, сохраняет числа в массив, выводит массив в консоль.");
 string? text = Console.ReadLine();
-/*
-var arrayText = new char[text.Length];
-for (int j = 0; j < text.Length; j++)
-{
-    arrayText[j] = text[j];
-}
-*/
-
 char[] arrayText = text.ToCharArray();
-//Console.WriteLine(text.GetType());
 
 int[] array = new int[8];
 int indexArray = 0;
-string number = string.Empty;
+string number = "";
 for (int i = 0; i < arrayText.Length; i++)
 {
     int digit;
 
     bool isDigit = int.TryParse(arrayText[i].ToString(), out digit);
-    //digit = Convert.ToInt32(arrayText[i]);
-    Console.WriteLine($"digit={digit}");
     if (isDigit == true)
     {
         string textDigit = Convert.ToString(digit);
         number = String.Concat(number, digit);
-        Console.WriteLine($"number={number}");
     }
 
     else
     {
-        int intNumber = Convert.ToInt32(number);
-        array[indexArray] = intNumber;
-        number = string.Empty;
-        indexArray++;
+        int intNumber;
+        if ((int.TryParse(number.ToString(), out intNumber)) == true)
+        {
+            array[indexArray] = intNumber;
+            number = "";
+            indexArray++;
+        }
     }
-    if (isDigit == true || i == arrayText.Length - 1)
+    if (isDigit == true && i == (arrayText.Length - 1))
     {
         int intNumber = Convert.ToInt32(number);
         array[indexArray] = intNumber;
     }
-
-
-
-
 }
 
 Console.WriteLine($"Массив: [ {String.Join(", ", array)} ]");
