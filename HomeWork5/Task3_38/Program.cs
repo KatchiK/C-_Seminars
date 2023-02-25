@@ -6,8 +6,7 @@
 */
 
 Console.Clear();
-Console.WriteLine("Программа создаёт массив, заполняет его случайными трёхзначными числами и подсчитывает в нём количество чётных чисел.");
-
+Console.WriteLine("Программа создаёт массив случайных вещественных чисел и находит разницу между максимальным и минимальным элементами массива.");
 
 double[] GetArray(int size, int minValue, int maxValue)
 {
@@ -18,12 +17,11 @@ double[] GetArray(int size, int minValue, int maxValue)
     for (int i = 0; i < result.Length; i++) // result.Length = size
     {
         doubleRandomNumber = new Random().NextDouble();
-        intRandomNumber = new Random().Next(-1000, 1001);
+        intRandomNumber = new Random().Next(minValue, maxValue+1);
         result[i] = doubleRandomNumber * intRandomNumber;
 
     }
-    return result; // Вернули массив на size элементов, заполненный числами
-    // от minValue до maxValue
+    return result; 
 }
 
 double DiffMaxMin(double[] array)
@@ -45,11 +43,10 @@ double DiffMaxMin(double[] array)
 
     }
     double diff = max - min;
+    Console.WriteLine($"Минимальный элемент массива:{min}\nМаксимальный элемент массива:{max}");
     return diff;
 }
 
-double[] array = GetArray(20, 100, 999);
-//Console.WriteLine($"В массиве\n[{String.Join("; ", array)}]");
-Console.WriteLine($"В массиве\n[{String.Join("; ", array)}]\nразница между максимальным и минимальным числом равняется {DiffMaxMin(array)}");
-
+double[] array = GetArray(10, -1000, 1000);
+Console.WriteLine($"В массиве\n[{String.Join("; ", array)}]\nразница между максимальным и минимальным элементами массива составляет {DiffMaxMin(array)}.");
 
