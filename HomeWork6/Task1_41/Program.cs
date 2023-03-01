@@ -67,6 +67,10 @@ for (int i = 0; i < sizeString; i++)
                 }
                 stringNumber = string.Empty;
             }
+            else if (enteredString[i-1] == '-')
+            {
+                stringNumber = string.Empty;
+            }
         }
     }
 }
