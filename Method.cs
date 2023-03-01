@@ -1,5 +1,5 @@
 ﻿
-int EnteringNumber(string text)//Метод для ввода числа, проверки на число "int"
+int EnteringNumber(string text)//Метод ввода простого числа, проверки на число "int"
 {
     Console.WriteLine(text);
 EnterNumber:
@@ -12,5 +12,19 @@ EnterNumber:
     }
     return num;
 }
+
+int[] GetArray(int size, int minValue, int maxValue) // Создание массива на size элементов
+{
+    int[] result = new int[size]; // Создание массива на size элементов
+    // Если size = 12, то массив состоит из 12 нулей
+    for (int i = 0; i < result.Length; i++) // result.Length = size
+    {
+        result[i] = new Random().Next(minValue, maxValue + 1);
+    }
+    return result; // Вернули массив на size элементов, заполненный числами
+    // от minValue до maxValue
+}
+
+Console.WriteLine($"Исходный массив:  [{String.Join("; ", array)}]");//Вывод массива в одну строку.
 
 

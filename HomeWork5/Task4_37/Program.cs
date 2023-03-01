@@ -1,7 +1,6 @@
 ﻿
 
-
-int[] GetArray(int size, int minValue, int maxValue)
+int[] GetArray(int size, int minValue, int maxValue) // Создание массива на size элементов
 {
     int[] result = new int[size]; // Создание массива на size элементов
     // Если size = 12, то массив состоит из 12 нулей
