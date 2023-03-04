@@ -25,6 +25,32 @@ int[] GetArray(int size, int minValue, int maxValue) // Создание мас�
     // от minValue до maxValue
 }
 
+int[,] GetMatrix(int rows, int cols, int minValue, int maxValue) // Создание двумерного массива с ранодмными числами.
+{
+    int[,] matrix = new int[rows, cols]; // [строчка, столбец]
+    for (int i = 0; i < rows; i++) // строчки; rows = matrix.GetLength(0)
+    {
+        // i,j,m,k - индексы
+        for (int j = 0; j < cols; j++)// столбцы; cols = matrix.GetLength(1)
+        {
+            matrix[i, j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return matrix; // Вернули заполненную табличку
+}
+
+void PrintMatrix(int[,] matr) // Печатаем двумерный массив
+{
+    for (int i = 0; i < matr.GetLength(0); i++) // проход по строчкам
+    {
+        for (int m = 0; m < matr.GetLength(1); m++) // Проход по столбцам
+        {
+            Console.Write(matr[i, m] + "\t"); // "\t" = 4 пробела или tab
+        }
+        Console.WriteLine();
+    }
+}
+
 Console.WriteLine($"Исходный массив:  [{String.Join("; ", array)}]");//Вывод массива в одну строку.
 
 
