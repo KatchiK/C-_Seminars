@@ -41,6 +41,18 @@ int[,] GetMatrix(int rows, int cols, int minValue, int maxValue) // Создан
 
 void PrintMatrix(int[,] matr) // Печатаем двумерный массив
 {
+    for (int i = 0; i < matr.GetLength(0); i++) 
+    {
+        for (int m = 0; m < matr.GetLength(1); m++)
+        {
+            Console.Write(matr[i, m] + "\t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void PrintMatrix(int[,] matr) // Печатаем двумерный массив
+{
     for (int i = 0; i < matr.GetLength(0); i++) // проход по строчкам
     {
         for (int m = 0; m < matr.GetLength(1); m++) // Проход по столбцам
