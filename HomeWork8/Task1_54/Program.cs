@@ -35,12 +35,32 @@ void PrintMatrix(int[,] matr) // Печатаем двумерный масси�
     }
 }
 
-int[,] OrderingLines(int[,] matrix)
+int[,] OrderingLines(int[,] matr)//Сортируем числа в строках матрицы
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)//обходим строки
     {
-        
-
+        for (int n = 0; n < matr.GetLength(1); n++)//меняем максимально число в строке и число по порядку местами
+        {
+            int maxNum = matr[i, n];
+            int indexCollMaxNum = n;
+            for (int j = 1 + n; j < matr.GetLength(1); j++)// находим максимальное число в строке и его индекс
+            {
+                if (matr[i, j] > maxNum)
+                {
+                    maxNum = matr[i, j];
+                    indexCollMaxNum = j;
+                }
+            }
+            int tempNum = matr[i, n];
+            matr[i, n] = maxNum;
+            matr[i, indexCollMaxNum] = tempNum;
+        }
     }
-
+    return matr;
 }
+
+int[,] matrix = GetMatrix(7, 5, -100, 100);
+Console.WriteLine("\nИсходная матрица:");
+PrintMatrix(matrix);
+Console.WriteLine("\nОтсортированная матрица:");
+PrintMatrix(OrderingLines(matrix));

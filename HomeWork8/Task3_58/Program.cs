@@ -33,38 +33,42 @@ void PrintMatrix(int[,] matr) // Печатаем двумерный масси�
     }
 }
 
-bool PossibleMatrixProduction(int[,] matrA, int[,] matrB)
-{   
-    if (matrA.GetLength(1) == matrA.GetLength(0))
-    {
-        
-    }
-}
-
-int[,] ProductMatrix(int[,] matrA, int[,] matrB)//перемножаем матрицы
+void ProductMatrix(int[,] matrA, int[,] matrB)//перемножаем матрицы
 {
-    if (matrA.GetLength(1) != matrA.GetLength(0)) 
+    int rowsResultMatr = matrA.GetLength(0);
+    int colsResultMatr = matrB.GetLength(1);
+
+    int[,] resultMatr = new int[rowsResultMatr, colsResultMatr];
+    if (matrA.GetLength(1) == matrB.GetLength(0))
     {
-        Console.WriteLine("Данные матрицы перемножить нельзя");
-        break;
+        for (int i = 0; i < rowsResultMatr; i++)
+        {
+            for (int j = 0; j < colsResultMatr; j++)
+            {
+                for (int n = 0; n < matrA.GetLength(1); n++)
+                {
+                    resultMatr[i, j] = resultMatr[i, j] + (matrA[i, n] * matrB[n, j]);
+                }
+
+            }
+        }
+        Console.WriteLine($"\nМатрица А * Матрица B =");
+        PrintMatrix(resultMatr);
     }
     else
     {
-        for (int i = 0; i < length; i++)
-        {
-            
-        }
+        Console.WriteLine("\nДанные матрицы перемножить нельзя");
     }
-
 }
 
 
-
-int [,] matrixA = GetMatrix(3,3, 0,10);
-int [,] matrixB = GetMatrix(3,3, 0,10);
+int[,] matrixA = GetMatrix(4, 3, 0, 10);
+int[,] matrixB = GetMatrix(3, 6, 0, 10);
 Console.WriteLine($"\nМатрица А:");
 PrintMatrix(matrixA);
 Console.WriteLine($"\nМатрица B:");
 PrintMatrix(matrixB);
+ProductMatrix(matrixA, matrixB);
+
 
 

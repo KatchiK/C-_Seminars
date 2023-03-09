@@ -6,7 +6,7 @@ EnterNumber:
     int num = 0;
     bool isNum = int.TryParse(Console.ReadLine(), out num);
     if (isNum == false)
-    { 
+    {
         Console.WriteLine("Введенное значение не является простым числом. Повторите ввод числе ещё раз:");
         goto EnterNumber;
     }
@@ -27,21 +27,19 @@ int[] GetArray(int size, int minValue, int maxValue) // Создание мас�
 
 int[,] GetMatrix(int rows, int cols, int minValue, int maxValue) // Создание двумерного массива с ранодмными числами.
 {
-    int[,] matrix = new int[rows, cols]; // [строчка, столбец]
-    for (int i = 0; i < rows; i++) // строчки; rows = matrix.GetLength(0)
+    int[,] matrix = new int[rows, cols];
+    for (int i = 0; i < rows; i++)
     {
-        // i,j,m,k - индексы
-        for (int j = 0; j < cols; j++)// столбцы; cols = matrix.GetLength(1)
+        for (int j = 0; j < cols; j++)
         {
             matrix[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
-    return matrix; // Вернули заполненную табличку
+    return matrix;
 }
-
 void PrintMatrix(int[,] matr) // Печатаем двумерный массив
 {
-    for (int i = 0; i < matr.GetLength(0); i++) 
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int m = 0; m < matr.GetLength(1); m++)
         {
