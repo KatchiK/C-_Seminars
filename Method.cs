@@ -25,7 +25,7 @@ int[] GetArray(int size, int minValue, int maxValue) // Создание мас�
     // от minValue до maxValue
 }
 
-int[,] GetMatrix(int rows, int cols, int minValue, int maxValue) // Создание двумерного массива с ранодмными числами.
+int[,] GetMatrix(int rows, int cols, int minValue, int maxValue) // Создание двумерного массива с рандомными числами.
 {
     int[,] matrix = new int[rows, cols];
     for (int i = 0; i < rows; i++)
