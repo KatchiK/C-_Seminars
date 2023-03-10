@@ -14,30 +14,18 @@ int[,,] GetArray3d(int axisX, int axisY, int axisZ, int minValue, int maxValue) 
         for (int y = 0; y < axisY; y++)
         {
             for (int z = 0; z < axisZ; z++)
+
             {
-            NewRandom:
-                arr3d[x, y, z] = new Random().Next(minValue, maxValue + 1);
-                for (int x1 = 0; x1 < axisX; x1++)// Проверка на повтор числа.
+                int randomValue = new Random().Next(minValue, maxValue + 1);
+                while (ChekNonRepeat(arr3d, randomValue, x, y, z))
                 {
-                    for (int y1 = 0; y1 < axisY; y1++)
-                    {
-                        for (int z1 = 0; z1 < axisZ; z1++)
-                        {
-                            if (x == x1 && y == y1 && z == z1)
-                            {
-                                goto Next;
-                            }
-                            else
-                            {
-                                if (arr3d[x1, y1, z1] == (arr3d[x, y, z]))
-                                {
-                                    goto NewRandom;
-                                }
-                            }
-                        Next:;
-                        }
-                    }
+                    randomValue = new Random().Next(minValue, maxValue + 1);
                 }
+
+                arr3d[x, y, z] = randomValue;
+
+                //arr3d[x, y, z]
+
             }
         }
     }
@@ -46,7 +34,7 @@ int[,,] GetArray3d(int axisX, int axisY, int axisZ, int minValue, int maxValue) 
 
 void PrintMatrix(int[,,] arr3d) // Печатаем трехмерный массив
 {
-  Console.WriteLine();
+    Console.WriteLine();
     for (int x = 0; x < arr3d.GetLength(0); x++)
     {
         for (int y = 0; y < arr3d.GetLength(1); y++)
@@ -61,5 +49,24 @@ void PrintMatrix(int[,,] arr3d) // Печатаем трехмерный мас�
     }
 }
 
+bool ChekNonRepeat(int[,,] arr3d, int value, int indexX, int indexY, int indexZ)
+{
+    for (int x = 0; x <= indexX; x++)
+    {
+        for (int y = 0; y <= indexY; y++)
+        {
+            for (int z = 0; z <= indexZ; z++)
+            {
+                                
+                    if (arr3d[x, y, z] == value)
+                    {
+                        return true;
+                    }
+                
+            }
+        }
+    }
+    return false;
+}
 int[,,] array3d = GetArray3d(3, 3, 3, 0, 27);
 PrintMatrix(array3d);
