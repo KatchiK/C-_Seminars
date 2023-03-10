@@ -49,13 +49,13 @@ void PrintMatrix(int[,,] arr3d) // Печатаем трехмерный мас�
     }
 }
 
-bool ChekNonRepeat(int[,,] arr3d, int value, int indexX, int indexY, int indexZ)
+bool ChekNonRepeat(int[,,] arr3d, int value, int indexX, int indexY, int indexZ)//проверка числа на наличие в массиве
 {
-    for (int x = 0; x <= indexX; x++)
+    for (int x = 0; x < arr3d.GetLength(0); x++)
     {
-        for (int y = 0; y <= indexY; y++)
+        for (int y = 0; y < arr3d.GetLength(1); y++)
         {
-            for (int z = 0; z <= indexZ; z++)
+            for (int z = 0; z < arr3d.GetLength(2); z++)
             {
                                 
                     if (arr3d[x, y, z] == value)
