@@ -53,19 +53,10 @@ int[,] GetMatrix(int rows, int cols) // Создание двухмерного 
             x--;
         }
         countSize++;
-        /*while (y >= countSize)
-        {
-            Console.Write($"countSize={countSize}; Yобр={y} ");
-            Console.WriteLine();
-            matrix[y, x] = num;
-            y--;
-            num++;
 
-        }
-        */
         while (y >= countSize)
         {
-            Console.Write($"countSize={countSize}; Yобр={y} \n");
+            Console.Write($"countSize={countSize}; Yобр={y} \n");//служебная печать
             matrix[y, x] = num;
             num++;
             y--;
