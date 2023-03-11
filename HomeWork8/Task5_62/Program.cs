@@ -14,35 +14,63 @@ int[,] GetMatrix(int rows, int cols) // Создание двухмерного 
     int y = 0;
     int x = 0;
     int num = 1;
-    int count = 1;
-    while (count < cols || count < rows)
+    int countSize = 0;
+
+    while (y != 1 || x != 1)
     {
-        while (x < cols - count)
+        if (countSize == 0)
         {
-            matrix[y, x] = num;
-            x++;
-            num++;
+            while (x < cols - 1)
+            {
+                matrix[y, x] = num;
+                num++;
+                x++;
+            }
         }
-        while (y < rows - count)
+        else
         {
-            matrix[y, x] = num;
-            y++;
-            num++;
-        }
-        while (x + 1 > count)
-        {
-            matrix[y, x] = num;
-            x--;
-            num++;
+            while (x < cols - countSize)
+            {
+                matrix[y, x] = num;
+                num++;
+                x++;
+            }
         }
 
-        while (y + 1 > count)
+
+        countSize++;
+        while (y < rows - countSize)
         {
+            matrix[y, x] = num;
+            num++;
+            y++;
+        }
+
+        while (x >= countSize)
+        {
+            matrix[y, x] = num;
+            num++;
+            x--;
+        }
+        countSize++;
+        /*while (y >= countSize)
+        {
+            Console.Write($"countSize={countSize}; Yобр={y} ");
+            Console.WriteLine();
             matrix[y, x] = num;
             y--;
             num++;
+
         }
-        count++;
+        */
+        while (y >= countSize)
+        {
+            Console.Write($"countSize={countSize}; Yобр={y} \n");
+            matrix[y, x] = num;
+            num++;
+            y--;
+        }
+
     }
     return matrix;
 }
