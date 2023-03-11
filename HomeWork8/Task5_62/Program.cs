@@ -17,10 +17,9 @@ int[,] GetMatrix(int rows, int cols) // Создание двухмерного 
     int countSize = 0;
     int countCicle = 1;
 
-    while (rows - countSize >= 1 && cols - countSize >= 1)
+    while (rows - countSize > 1 && cols - countSize > 1)
 
     {
-        Console.WriteLine();
         if (countSize == 0)
         {
             while (x < cols - 1)
@@ -29,49 +28,42 @@ int[,] GetMatrix(int rows, int cols) // Создание двухмерного 
                 num++;
                 x++;
             }
-            Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
             countSize++;
         }
         else
         {
             while (x < cols - countSize)
             {
+                Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(1); num={num}; y,x={y},{x}");
                 matrix[y, x] = num;
                 num++;
                 x++;
             }
-            Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
         }
-
-        //countSize++; - может он нужен???
-        Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
         while (y < rows - countSize)
         {
+           Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(2); num={num}; y,x={y},{x}");
             matrix[y, x] = num;
             num++;
             y++;
         }
-        Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
+
         while (x >= countSize)
         {
-            Console.Write($"countSize={countSize} x={x} ;");//служебная печать
+            Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(3); num={num}; y,x={y},{x}");
             matrix[y, x] = num;
             num++;
             x--;
-            Console.Write($"countSize={countSize} x(после --)={x} ;");//служебная печать
         }
-
         countSize++;
-        Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
         while (y >= countSize)
         {
-            // Console.Write($"countSize={countSize}; Yобр={y} \n");//служебная печать
+            Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(4); num={num}; y,x={y},{x}");
             matrix[y, x] = num;
             num++;
             y--;
+
         }
-        Console.WriteLine($"Цикл№{countCicle}; countSize ={countSize}; (y,x)=({y},{x}); Число={num} ");
-        //Console.Write($"countSize={countSize}; Yобр={y} \n");
         countCicle++;
 
     }
@@ -90,5 +82,5 @@ void PrintMatrix(int[,] matr) // Печатаем двумерный масси�
     }
 }
 
-int[,] resultMatrix = GetMatrix(4, 4);
+int[,] resultMatrix = GetMatrix(6, 8);
 PrintMatrix(resultMatrix);
