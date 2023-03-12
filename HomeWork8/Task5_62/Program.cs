@@ -8,64 +8,60 @@
 */
 
 
-int[,] GetMatrix(int rows, int cols) // Создание двухмерного массива
+int[,] GetMatrix(int sizeArr) // Создание двухмерного массива c заполнением простыми числами по спирали.
 {
-    int[,] matrix = new int[rows, cols];
+    int[,] matrix = new int[sizeArr, sizeArr];
     int y = 0;
     int x = 0;
     int num = 1;
-    int countSize = 0;
-    int countCicle = 1;
+    int countSize = 1;
 
-    while (rows - countSize > 1 && cols - countSize > 1)
 
+    for (int j = 0; j < (sizeArr + 1) / 2; j++)
     {
-        if (countSize == 0)
+        if (countSize == 1)
         {
-            while (x < cols - 1)
+            for (int i = 0; i < sizeArr - countSize; i++)
             {
                 matrix[y, x] = num;
-                num++;
                 x++;
+                num++;
             }
-            countSize++;
         }
         else
         {
-            while (x < cols - countSize)
+            for (int i = 0; i < sizeArr - countSize; i++)
             {
-                Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(1); num={num}; y,x={y},{x}");
                 matrix[y, x] = num;
-                num++;
                 x++;
+                num++;
             }
+            countSize++;
         }
-        while (y < rows - countSize)
+        for (int i = 0; i < sizeArr - countSize; i++)
         {
-           Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(2); num={num}; y,x={y},{x}");
             matrix[y, x] = num;
-            num++;
             y++;
-        }
-
-        while (x >= countSize)
-        {
-            Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(3); num={num}; y,x={y},{x}");
-            matrix[y, x] = num;
             num++;
+        }
+        for (int i = 0; i < sizeArr - countSize; i++)
+        {
+            matrix[y, x] = num;
             x--;
+            num++;
         }
         countSize++;
-        while (y >= countSize)
+        Console.WriteLine($"countSize({countSize})");
+        for (int i = 0; i < sizeArr - countSize; i++)
         {
-            Console.WriteLine($"Цикл({countCicle}); countSize({countSize}); while(4); num={num}; y,x={y},{x}");
             matrix[y, x] = num;
-            num++;
             y--;
-
+            num++;
         }
-        countCicle++;
-
+        if (countSize >= sizeArr)
+        {
+            matrix[y, x] = num;
+        }
     }
     return matrix;
 }
@@ -82,5 +78,5 @@ void PrintMatrix(int[,] matr) // Печатаем двумерный масси�
     }
 }
 
-int[,] resultMatrix = GetMatrix(6, 8);
+int[,] resultMatrix = GetMatrix(8);
 PrintMatrix(resultMatrix);
